@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://vejkjxqie7gr"]
+
+[ext_resource type="Texture2D" uid="uid://dcgtids4bf2ji" path="res://assets/sprites/bg.png" id="1_eml7x"]
+[ext_resource type="Script" uid="uid://d4o0qyf0gk4w" path="res://ui/interfaz.gd" id="1_pu38s"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_pu38s")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 448.0
+offset_top = 221.0
+offset_right = 622.0
+offset_bottom = 305.0
+text = "INICIAR  JUEGO
+"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 446.0
+offset_top = 325.0
+offset_right = 621.0
+offset_bottom = 407.0
+text = "SALIR DEL JUEGO"
+
+[node name="Bg" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(573.321, 323.657)
+scale = Vector2(-0.513703, 0.469226)
+texture = ExtResource("1_eml7x")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
