@@ -1,4 +1,3 @@
-GridContainer
-CanvasLayer
-Container
-Button
+CollisionShape3D
+MeshInstance3D
+CharacterBody3D

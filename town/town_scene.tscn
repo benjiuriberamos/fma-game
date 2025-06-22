@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d0ygmqpylq0wy"]
+[gd_scene load_steps=12 format=3 uid="uid://d0ygmqpylq0wy"]
 
 [ext_resource type="PackedScene" uid="uid://csucj4oj3q3qt" path="res://town/model/town_model.gltf" id="1_amwer"]
 [ext_resource type="Script" uid="uid://ycaxe40edj35" path="res://town/town_scene.gd" id="1_gxe8p"]
@@ -19,12 +19,6 @@ fog_enabled = true
 fog_light_color = Color(0.62, 0.6014, 0.6014, 1)
 fog_density = 0.0015
 fog_sky_affect = 0.0
-
-[sub_resource type="InputEventAction" id="InputEventAction_a4722"]
-action = &"cycle_speedometer_unit"
-
-[sub_resource type="Shortcut" id="Shortcut_msvqx"]
-events = [SubResource("InputEventAction_a4722")]
 
 [sub_resource type="Gradient" id="Gradient_jks6h"]
 offsets = PackedFloat32Array(0)
@@ -209,26 +203,6 @@ surface_material_override/0 = ExtResource("2_ubld8")
 [node name="RacetrackMesh" parent="TownModel/Racetrack/RacetrackMain" index="0"]
 surface_material_override/0 = ExtResource("3_8s61a")
 
-[node name="Spedometer" type="Button" parent="."]
-custom_minimum_size = Vector2(140, 40)
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -164.0
-offset_top = -64.0
-offset_right = -24.0
-offset_bottom = -24.0
-grow_horizontal = 0
-grow_vertical = 0
-focus_mode = 0
-action_mode = 0
-shortcut = SubResource("Shortcut_msvqx")
-shortcut_feedback = false
-shortcut_in_tooltip = false
-text = "Speed: ???"
-
 [node name="Back" type="Button" parent="."]
 offset_left = 24.0
 offset_top = 24.0
@@ -292,7 +266,5 @@ texture_pressed = SubResource("GradientTexture2D_xu6xc")
 passby_press = true
 action = "turn_right"
 visibility_mode = 1
-
-[connection signal="pressed" from="Spedometer" to="Spedometer" method="_on_spedometer_pressed"]
 
 [editable path="TownModel"]

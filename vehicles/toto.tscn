@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhn0p46x0h7t7"]
+
+[ext_resource type="Script" uid="uid://cyxbnajqsue0" path="res://vehicles/toto.gd" id="1_yhnta"]
+[ext_resource type="ArrayMesh" uid="uid://clkk8r33iogvr" path="res://assets/Toto.res" id="2_a84p4"]
+[ext_resource type="Script" uid="uid://bgr2k6joe7a2f" path="res://vehicles/follow_camera.gd" id="4_4ce85"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yhnta"]
+size = Vector3(1, 0.955078, 1.24902)
+
+[node name="Toto" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.70701, 0)
+script = ExtResource("1_yhnta")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = ExtResource("2_a84p4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1.30989, 0, 0, 0, 2.23986, 0, 0, 0, 1.23049, -0.0183632, 0.0968945, -0.0481057)
+shape = SubResource("BoxShape3D_yhnta")
+
+[node name="CameraBase" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97449, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/CameraBase"]
+transform = Transform3D(-1, 2.11495e-08, -8.48259e-08, 0, 0.970296, 0.241922, 8.74227e-08, 0.241922, -0.970295, 0, 2.032, -4.394)
+current = true
+fov = 74.0
+near = 0.1
+script = ExtResource("4_4ce85")
+min_distance = 5.0
+max_distance = 7.0
+height = 1.75
+
+[node name="InteriorCameraPosition" type="Marker3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.9, 0.3)
+
+[node name="TopDownCameraPosition" type="Marker3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0.00169557, 15.7771, 0.0955178)

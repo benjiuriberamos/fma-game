@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://csxl8xxs3vcm4"
 path.bptc="res://.godot/imported/grass_lossy.webp-8d729bb1beb4fa54f09f92965c817f82.bptc.ctex"
+path.astc="res://.godot/imported/grass_lossy.webp-8d729bb1beb4fa54f09f92965c817f82.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://town/model/textures/grass_lossy.webp"
-dest_files=["res://.godot/imported/grass_lossy.webp-8d729bb1beb4fa54f09f92965c817f82.bptc.ctex"]
+dest_files=["res://.godot/imported/grass_lossy.webp-8d729bb1beb4fa54f09f92965c817f82.bptc.ctex", "res://.godot/imported/grass_lossy.webp-8d729bb1beb4fa54f09f92965c817f82.astc.ctex"]
 
 [params]
 

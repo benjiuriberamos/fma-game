@@ -1,7 +1,4 @@
-res://README.md
-res://interfaz.tscn
-res://ui/interfaz.tscn
-res://ui/interfaz.gd
-res://town/town_scene.tscn
-res://town/town_scene.gd
-res://town/model/racetrack_csg.tscn
+res://vehicles/tow_truck.tscn
+res://assets/Toto.res
+res://car_select/car_select.tscn
+res://vehicles/toto.tscn
